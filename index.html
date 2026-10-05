@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026暑假 墨爾本9天補進度之旅 ｜ 活潑休閒風多載具互動指南</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Quicksand', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    }
+    
+    /* Playful Aussie Vacation Gradient & Background Pattern */
+    .bg-aussie-pattern {
+      background-color: #0f172a;
+      background-image: 
+        radial-gradient(rgba(14, 165, 233, 0.2) 1.5px, transparent 1.5px), 
+        radial-gradient(rgba(249, 115, 22, 0.15) 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
+
+    .hero-banner-gradient {
+      background: linear-gradient(135deg, #0284c7 0%, #0d9488 45%, #f97316 100%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(14, 165, 233, 0.35); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(14, 165, 233, 0.6); }
+
+    /* Device Simulator Frames */
+    #device-wrapper {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* 1. Desktop Mode (100% Widescreen) */
+    .frame-desktop {
+      width: 100% !important;
+      max-width: 1260px !important;
+      border-radius: 0px;
+      box-shadow: none;
+      border: none;
+    }
+
+    /* 2. Mobile Portrait (iPhone 390 x 844 px) */
+    .frame-mobile-portrait {
+      width: 390px !important;
+      max-width: 94vw !important;
+      min-height: 844px;
+      border-radius: 46px;
+      box-shadow: 0 25px 65px -15px rgba(15, 23, 42, 0.45), 0 0 0 12px #0f172a, 0 0 0 14px #334155;
+      margin-top: 18px;
+      margin-bottom: 36px;
+    }
+
+    /* 3. Tablet 16:9 Landscape Mode (1024 x 576 px 16:9 Standard) */
+    .frame-tablet-16-9 {
+      width: 1024px !important;
+      max-width: 96vw !important;
+      min-height: 640px;
+      border-radius: 32px;
+      box-shadow: 0 25px 65px -15px rgba(15, 23, 42, 0.45), 0 0 0 12px #1e293b, 0 0 0 14px #38bdf8;
+      margin-top: 18px;
+      margin-bottom: 36px;
+    }
+
+    .nav-tab-active {
+      border-color: #f97316 !important;
+      color: #ea580c !important;
+      background-color: #fff7ed !important;
+      font-weight: 800 !important;
+      transform: translateY(-1px);
+    }
+
+    .sticker-badge {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+      #device-wrapper { width: 100% !important; max-width: 100% !important; box-shadow: none !important; border: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-800 antialiased min-h-screen flex flex-col items-center">
+
+  <!-- ==================================================== -->
+  <!-- TOP DEVICE SIMULATOR TOOLBAR -->
+  <!-- ==================================================== -->
+  <header class="w-full bg-slate-950/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 text-white no-print shadow-xl">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-amber-400 via-orange-500 to-sky-500 flex items-center justify-center font-black text-white text-lg shadow-md animate-bounce">
+          🦘
+        </div>
+        <div>
+          <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span>2026 墨爾本補進度之旅 • 載具切換設定</span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          </div>
+          <div class="text-sm font-extrabold text-slate-100 flex items-center gap-2">
+            <span id="currentDeviceLabel">💻 電腦版（寬螢幕 100%）</span>
+            <span id="currentDimensionLabel" class="text-[11px] font-mono text-amber-300 bg-slate-800/80 px-2 py-0.5 rounded-md border border-slate-700">100% 滿版自適應</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Device Switcher Buttons -->
+      <div class="flex items-center bg-slate-900 p-1 rounded-2xl border border-slate-800 shadow-inner gap-1">
+        <!-- Desktop -->
+        <button onclick="setDeviceMode('desktop')" id="btn-desktop" class="device-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-sm">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span class="hidden sm:inline">電腦版</span>
+        </button>
+
+        <!-- Mobile Portrait -->
+        <button onclick="setDeviceMode('mobile')" id="btn-mobile" class="device-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white hover:bg-slate-800">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          <span>📲 手機直式</span>
+        </button>
+
+        <!-- Tablet 16:9 -->
+        <button onclick="setDeviceMode('tablet-16-9')" id="btn-tablet" class="device-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition text-slate-300 hover:text-white hover:bg-slate-800">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span>📱 平板 16:9</span>
+        </button>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.print()" class="px-2.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span class="hidden sm:inline">列印 / 匯出</span>
+        </button>
+        <button onclick="resetTripProgress()" class="px-2.5 py-1.5 rounded-xl text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30 hover:bg-rose-500/30 transition">
+          重置進度
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================================================== -->
+  <!-- MAIN SIMULATOR CONTAINER -->
+  <!-- ==================================================== -->
+  <div id="device-wrapper" class="frame-desktop bg-[#fcfcf9] overflow-hidden relative transition-all duration-300">
+
+    <!-- Mobile Top Bezel (Visible only in mobile mode) -->
+    <div id="sim-status-bar" class="hidden bg-slate-950 text-white px-7 py-2.5 flex items-center justify-between text-xs font-semibold select-none border-b border-slate-800/80">
+      <span class="font-mono text-[11px] font-bold">09:41</span>
+      <!-- Dynamic Island -->
+      <div class="h-4 w-28 bg-black rounded-full border border-slate-800 flex items-center justify-center gap-1.5">
+        <span class="text-[9px]">🐨 墨爾本</span>
+        <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+      </div>
+      <div class="flex items-center gap-1 text-[11px]">
+        <span>5G</span>
+        <span class="text-[10px]">100%</span>
+      </div>
+    </div>
+
+    <!-- Tablet 16:9 Indicator Bar (Visible only in tablet 16:9 mode) -->
+    <div id="sim-tablet-bar" class="hidden bg-slate-900 text-sky-200 px-6 py-1.5 flex items-center justify-between text-xs font-semibold select-none border-b border-sky-800/50">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+        <span class="font-bold text-[11px]">📱 平板 16:9 寬螢幕劇院模式（1024 × 576 規格優化）</span>
+      </div>
+      <div class="text-[11px] text-slate-400">雙欄流暢網格 • 觸控好閱讀</div>
+    </div>
+
+    <!-- Lively Colorful Hero Header -->
+    <header class="hero-banner-gradient text-white shadow-xl relative overflow-hidden border-b-4 border-amber-400">
+      <div class="max-w-6xl mx-auto px-4 py-7 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-md border border-white/30 mb-2.5 shadow-sm">
+              <span>🇦🇺 2026 暑假家族旅遊</span>
+              <span>•</span>
+              <span>8/17(一) ~ 8/27(四) • 越航延後多玩1天！共11天充實全覽</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-white flex items-center gap-2.5">
+              <span>墨爾本 9 天補進度之旅</span>
+              <span class="text-2xl sm:text-3xl">☕🌊🐧🚂</span>
+            </h1>
+            <p class="mt-2 text-white/90 text-xs sm:text-sm max-w-2xl font-medium leading-relaxed">
+              大洋路十二使徒岩金光 • 菲利普島神仙企鵝歸巢 • 普芬比利百年蒸汽火車 • 南墨爾本生蠔可頌 • 墨大巡禮與維媽冬季夜市！
+            </p>
+          </div>
+
+          <!-- Quick Stats Pills -->
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="bg-white/15 backdrop-blur-md rounded-2xl p-3 border border-white/20 text-center shadow-sm">
+              <div class="text-white/80 font-bold">總遊覽天數</div>
+              <div class="text-lg sm:text-xl font-black text-amber-200">11 天 10 夜</div>
+              <div class="text-[10px] text-white/70">越航航班延後多賺1天！</div>
+            </div>
+            <div class="bg-white/15 backdrop-blur-md rounded-2xl p-3 border border-white/20 text-center shadow-sm">
+              <div class="text-white/80 font-bold">官方預約憑證</div>
+              <div class="text-lg sm:text-xl font-black text-emerald-300" id="headerBookingCount">0 / 5 完成</div>
+              <div class="text-[10px] text-white/70">火車/企鵝/渡輪/飯店</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Stage Highlights Bar -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-6 pt-5 border-t border-white/20 text-xs">
+          <div class="bg-white/10 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center gap-2.5">
+            <span class="text-2xl">🌊</span>
+            <div>
+              <span class="font-extrabold text-amber-200 block text-xs">第一階段 • 大洋路壯麗自駕</span>
+              <span class="text-[11px] text-white/90">D1~D3：吉朗木偶、阿波羅灣、十二使徒岩金光</span>
+            </div>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center gap-2.5">
+            <span class="text-2xl">🐧</span>
+            <div>
+              <span class="font-extrabold text-emerald-200 block text-xs">第二階段 • 海島生態與蒸汽火車</span>
+              <span class="text-[11px] text-white/90">D4~D6：車輛渡輪、神仙企鵝歸巢、普芬比利掛腳火車</span>
+            </div>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center gap-2.5">
+            <span class="text-2xl">☕</span>
+            <div>
+              <span class="font-extrabold text-sky-200 block text-xs">第三階段 • 墨爾本都會慢活</span>
+              <span class="text-[11px] text-white/90">D7~D11：Milano米蘭公寓、南墨市場生蠔、墨大、維媽夜市</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Navigation Tabs & Search Bar -->
+    <nav class="sticky top-0 sm:top-14 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm no-print">
+      <div class="max-w-6xl mx-auto px-3 sm:px-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 py-2">
+          
+          <!-- Nav Tabs -->
+          <div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none text-xs">
+            <button onclick="switchTab('itinerary')" id="nav-itinerary" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent transition whitespace-nowrap flex items-center gap-1.5 nav-tab-active font-bold">
+              <span>📅 每日行程 (D1~D11)</span>
+            </button>
+            <button onclick="switchTab('bookings')" id="nav-bookings" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent text-slate-600 hover:text-orange-600 transition whitespace-nowrap flex items-center gap-1.5 font-bold">
+              <span>🎟️ 預定與憑證檔案</span>
+              <span class="px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-700 text-[10px] font-bold">5項</span>
+            </button>
+            <button onclick="switchTab('stays')" id="nav-stays" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent text-slate-600 hover:text-orange-600 transition whitespace-nowrap flex items-center gap-1.5 font-bold">
+              <span>🏨 4大特色住宿/營地</span>
+            </button>
+            <button onclick="switchTab('food')" id="nav-food" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent text-slate-600 hover:text-orange-600 transition whitespace-nowrap flex items-center gap-1.5 font-bold">
+              <span>🍴 必吃美食地圖</span>
+            </button>
+            <button onclick="switchTab('tips')" id="nav-tips" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent text-slate-600 hover:text-orange-600 transition whitespace-nowrap flex items-center gap-1.5 font-bold">
+              <span>⚠️ 自駕與電車避坑守則</span>
+            </button>
+            <button onclick="switchTab('budget')" id="nav-budget" class="nav-tab-btn px-3 py-1.5 rounded-xl border border-transparent text-slate-600 hover:text-orange-600 transition whitespace-nowrap flex items-center gap-1.5 font-bold">
+              <span>🧮 預算試算與清單</span>
+            </button>
+          </div>
+
+          <!-- Search -->
+          <div class="relative w-full sm:w-60 flex-shrink-0">
+            <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="搜尋使徒岩、可頌、生蠔、火車..." 
+              class="w-full pl-8 pr-7 py-1 text-xs bg-amber-50/60 border border-amber-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:bg-white transition" />
+            <svg class="w-3.5 h-3.5 text-amber-500 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2.5 top-1.5 text-xs text-slate-400 hover:text-slate-600 font-bold">×</button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Body -->
+    <main class="max-w-6xl mx-auto px-3 sm:px-6 py-5">
+
+      <!-- ==================================================== -->
+      <!-- TAB 1: 11 DAYS DETAILED ITINERARY -->
+      <!-- ==================================================== -->
+      <div id="view-itinerary" class="tab-content space-y-4">
+
+        <!-- Stage Filter Buttons -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+          <button onclick="filterStage(1)" class="p-2.5 rounded-2xl border border-sky-200 bg-sky-50/70 hover:bg-sky-100 text-left transition shadow-xs flex items-center gap-2">
+            <span class="text-xl">🌊</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-sky-900">第一階段 • 大洋路壯麗自駕</div>
+              <div class="text-[11px] text-sky-700 truncate">D1~D3 • 吉朗木偶、阿波羅灣、十二使徒岩金光</div>
+            </div>
+          </button>
+          <button onclick="filterStage(2)" class="p-2.5 rounded-2xl border border-emerald-200 bg-emerald-50/70 hover:bg-emerald-100 text-left transition shadow-xs flex items-center gap-2">
+            <span class="text-xl">🐧</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-emerald-900">第二階段 • 海島生態與蒸汽火車</div>
+              <div class="text-[11px] text-emerald-700 truncate">D4~D6 • 渡輪、神仙企鵝歸巢、普芬比利掛腳火車</div>
+            </div>
+          </button>
+          <button onclick="filterStage(3)" class="p-2.5 rounded-2xl border border-amber-200 bg-amber-50/70 hover:bg-amber-100 text-left transition shadow-xs flex items-center gap-2">
+            <span class="text-xl">🚋</span>
+            <div class="min-w-0">
+              <div class="font-extrabold text-amber-900">第三階段 • 墨爾本都會慢活</div>
+              <div class="text-[11px] text-amber-700 truncate">D7~D11 • 南墨市場、墨大巡禮、維媽冬季夜市</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Day Pills Carousel -->
+        <div class="bg-white p-2.5 rounded-2xl border border-amber-100 shadow-sm flex items-center justify-between gap-2 overflow-x-auto">
+          <div class="flex items-center gap-1.5 flex-nowrap" id="dayPillsContainer">
+            <!-- Populated by JS -->
+          </div>
+          <div class="flex items-center gap-2 pl-2 border-l border-slate-200 flex-shrink-0">
+            <button onclick="toggleAllDays()" id="btnToggleAllDays" class="text-xs px-2.5 py-1 rounded-xl border border-slate-300 hover:bg-slate-50 font-bold text-slate-700 whitespace-nowrap">
+              📑 展開全 11 天
+            </button>
+          </div>
+        </div>
+
+        <!-- Itinerary Cards Container -->
+        <div id="itineraryContainer" class="space-y-4">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- TAB 2: BOOKINGS & TICKETS -->
+      <!-- ==================================================== -->
+      <div id="view-bookings" class="tab-content hidden space-y-4">
+        <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 text-xs font-extrabold">官方正式訂位記錄</span>
+              <h2 class="text-lg sm:text-xl font-black text-slate-900 mt-1">🎟️ 本趟旅程 5 大必備預約憑證檔案</h2>
+            </div>
+            <span class="text-xs font-bold text-slate-500" id="bookingsDoneCount">0 / 5 完成確認</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-4" id="bookingsGridContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- TAB 3: ACCOMMODATION & CAMPS -->
+      <!-- ==================================================== -->
+      <div id="view-stays" class="tab-content hidden space-y-4">
+        <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-extrabold">特色下榻檔案</span>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">🏨 4 大特色住宿與渡假營地實記</h2>
+          </div>
+          <p class="text-slate-600 text-xs">
+            由大洋路海景汽車旅館、國家公園木屋營地、島嶼朱鷺木屋到市區連住5晚的泳池健身房公寓！
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-4" id="staysGridContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- TAB 4: ICONIC FOODS -->
+      <!-- ==================================================== -->
+      <div id="view-food" class="tab-content hidden space-y-4">
+        <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold">饕客實測推薦</span>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">🍴 墨爾本自由行必吃美食與市場清單</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-4" id="foodsGridContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- TAB 5: TIPS & NOTICES -->
+      <!-- ==================================================== -->
+      <div id="view-tips" class="tab-content hidden space-y-4">
+        <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-extrabold">自駕與市區生存攻略</span>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">⚠️ 墨爾本自駕加油、袋鼠路殺與免費電車避坑守則</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-4" id="tipsGridContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- TAB 6: BUDGET & PACKLIST -->
+      <!-- ==================================================== -->
+      <div id="view-budget" class="tab-content hidden space-y-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- Budget Estimator -->
+          <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-2.5 border-b border-slate-100">
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-900">🧮 旅費試算器 (4人總支出試算)</h3>
+                <span class="text-[11px] px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 font-bold">1 AUD ≈ 21.5 NTD</span>
+              </div>
+
+              <!-- Sliders -->
+              <div class="mt-4 space-y-3 text-xs">
+                <div>
+                  <div class="flex justify-between font-bold text-slate-700">
+                    <span>✈️ 國際機票 (越南航空 4人)</span>
+                    <span id="label-flight">NT$ 96,000 (AU$4,465)</span>
+                  </div>
+                  <input type="range" id="input-flight" min="70000" max="140000" step="2000" value="96000" oninput="calculateBudget()" class="w-full mt-1 accent-orange-500">
+                </div>
+
+                <div>
+                  <div class="flex justify-between font-bold text-slate-700">
+                    <span>🏨 10晚住宿 (海景旅館+營地木屋+米蘭公寓)</span>
+                    <span id="label-stay">NT$ 42,000 (AU$1,953)</span>
+                  </div>
+                  <input type="range" id="input-stay" min="25000" max="70000" step="1000" value="42000" oninput="calculateBudget()" class="w-full mt-1 accent-orange-500">
+                </div>
+
+                <div>
+                  <div class="flex justify-between font-bold text-slate-700">
+                    <span>🚗 租車、油資與 Searoad 渡輪</span>
+                    <span id="label-transit">NT$ 22,000 (AU$1,023)</span>
+                  </div>
+                  <input type="range" id="input-transit" min="12000" max="38000" step="1000" value="22000" oninput="calculateBudget()" class="w-full mt-1 accent-orange-500">
+                </div>
+
+                <div>
+                  <div class="flex justify-between font-bold text-slate-700">
+                    <span>🎟️ 門票活動 (普芬比利火車+企鵝看台)</span>
+                    <span id="label-ticket">NT$ 14,000 (AU$651)</span>
+                  </div>
+                  <input type="range" id="input-ticket" min="8000" max="25000" step="500" value="14000" oninput="calculateBudget()" class="w-full mt-1 accent-orange-500">
+                </div>
+
+                <div>
+                  <div class="flex justify-between font-bold text-slate-700">
+                    <span>🍽️ 11天餐飲超市採買與生蠔</span>
+                    <span id="label-food">NT$ 32,000 (AU$1,488)</span>
+                  </div>
+                  <input type="range" id="input-food" min="15000" max="55000" step="1000" value="32000" oninput="calculateBudget()" class="w-full mt-1 accent-orange-500">
+                </div>
+              </div>
+            </div>
+
+            <!-- Total -->
+            <div class="mt-4 pt-3 border-t border-slate-100 bg-amber-50/60 p-3.5 rounded-2xl">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs font-bold text-slate-700">4 人總花費預估：</span>
+                <div class="text-right">
+                  <div class="text-xl font-black text-orange-600" id="totalNTD">NT$ 206,000</div>
+                  <div class="text-[11px] text-slate-500 font-bold" id="totalAUD">約 AU$ 9,581 澳幣 (每人約 NT$ 51,500)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pack List -->
+          <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-2.5 border-b border-slate-100">
+                <h3 class="text-sm sm:text-base font-extrabold text-slate-900">🎒 澳洲冬末初春打包必備清單</h3>
+                <span class="text-xs font-bold px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-full" id="packProgress">0 / 12 完成</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1.5">點擊打勾即時存檔至瀏覽器：</p>
+              <div class="mt-3 space-y-1.5 text-xs" id="packListContainer">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Mobile Simulated Home Bar -->
+    <div id="sim-home-bar" class="hidden pb-2 pt-2.5 flex justify-center bg-slate-100 select-none">
+      <div class="w-32 h-1 bg-slate-800/40 rounded-full"></div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Floating Quick Day Navigator -->
+  <div id="quickDayNav" class="fixed bottom-4 z-40 bg-slate-900/90 text-white backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs border border-slate-700 no-print">
+    <button onclick="navigateDay(-1)" class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 font-bold">
+      ◀ 前一天
+    </button>
+    <span id="quickDayIndicator" class="font-black text-amber-400 px-1 font-mono">Day 1 / 11</span>
+    <button onclick="navigateDay(1)" class="px-2.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 font-bold">
+      後一天 ▶
+    </button>
+  </div>
+
+  <!-- ==================================================== -->
+  <!-- JAVASCRIPT APPLICATION DATA & LOGIC -->
+  <!-- ==================================================== -->
+  <script>
+    // Trip Data Model
+    const melbourneTrip = {
+      stages: [
+        { id: 1, name: "第一階段：大洋路壯麗自駕", days: [1, 2, 3] },
+        { id: 2, name: "第二階段：海島生態與蒸汽火車", days: [4, 5, 6] },
+        { id: 3, name: "第三階段：墨爾本都會慢活", days: [7, 8, 9, 10, 11] }
+      ],
+      days: [
+        {
+          day: 1,
+          date: "8/17 (一)",
+          theme: "啟程航向南半球 ➔ 越南轉機免費 JCB 貴賓室",
+          stageId: 1,
+          route: "萬丹 ➔ 高雄小港 KHH ➔ 胡志明市 SGN ➔ 墨爾本 MEL",
+          stay: "機上飛航",
+          stayCost: "機票內含",
+          lunch: "家中/機場自理",
+          dinner: "胡志明轉機 JCB 貴賓室 / 機上餐",
+          highlights: "小港專車接送、胡志明 Rose Business Lounge 免費享用、鎖定油價 APP",
+          items: [
+            { id: "d1-1", time: "09:00", title: "預約專車機場接送出發", tag: "出發交通", type: "transport", desc: "預約潮州計程車（單趟NT$700），自屏東萬丹出發前往小港機場 T1。" },
+            { id: "d1-2", time: "13:00", title: "搭乘越南航空 VN583 起飛", tag: "國際航班", type: "transport", desc: "高雄 KHH(T1) 13:00 起飛，航程約 3 小時，15:00 抵達越南胡志明市新山一國際機場 SGN(T2)。" },
+            { id: "d1-3", time: "15:30", title: "胡志明市轉機：爽用 JCB 免費 Rose 貴賓室", tag: "轉機福利", type: "food", desc: "轉機空檔 6 小時，過安檢後右轉 Gate 8~9 旁 Rose Business Lounge，持 JCB 信用卡免費享受熱食、河粉、淋浴與按摩椅休憩 3 小時！" },
+            { id: "d1-4", time: "21:25", title: "搭乘 VN781 直飛澳洲墨爾本", tag: "長途航段", type: "transport", desc: "登上夜航客機，在機上用餐並充分補眠，明日一早抵達澳洲墨爾本！手機先裝好 FuelCheck 與 My 7-Eleven APP 準備鎖油價。" }
+          ],
+          diary: "出發前阿寬補習完返回萬丹打包，這趟期待已久的墨爾本補進度之旅正式啟航！越南航空胡志明轉機時間充裕，JCB 貴賓室真的超級實用又舒適。"
+        },
+        {
+          day: 2,
+          date: "8/18 (二)",
+          theme: "抵達墨爾本 ➔ 吉朗超市補烤雞 ➔ 奔向大洋路阿波羅灣",
+          stageId: 1,
+          route: "墨爾本機場 (MEL) ➔ 吉朗 (Geelong) ➔ 大洋路門牌 ➔ 洛恩小鎮 ➔ 阿波羅灣",
+          stay: "阿波羅灣海景汽車旅館 Seaview Motel & Apartments",
+          stayCost: "NT$ 3,330 (Trip.com)",
+          lunch: "吉朗 Coles Geelong West 熟食烤全雞",
+          dinner: "自煮牛排或 Apollo Bay Fishermen's Co-Op 炸魚薯條",
+          highlights: "吉朗彩繪木偶、大洋路傳奇木拱門、大西洋海景第一排入住",
+          items: [
+            { id: "d2-1", time: "08:35", title: "抵達墨爾本機場 (MEL T2) & 取車", tag: "入境取車", type: "transport", desc: "順利通關提領行李，至租車櫃台取車，熟悉右駕操作後約 10:00 出發啟程。" },
+            { id: "d2-2", time: "11:00", title: "吉朗 Coles Geelong West 超市大補貨", tag: "超市補給", type: "food", desc: "採買三天份非冷藏食材、零食（Tim Tam、Shapes 餅乾）與午餐香噴噴烤全雞。**重要任務：在吉朗把油箱加滿，大洋路上的油價非常昂貴！**" },
+            { id: "d2-3", time: "13:20", title: "吉朗海濱彩色木偶 (Baywalk Bollards)", tag: "拍照打卡", type: "spot", desc: "欣賞岸邊由繫船柱雕刻繪製成俏皮市民造型的木偶群，吹著海風吃點心。" },
+            { id: "d2-4", time: "13:50", title: "大洋路著名起點門牌 (Memorial Arch)", tag: "歷史地標", type: "spot", desc: "一戰退伍老兵開鑿大洋路的紀念木拱門，必停下車合影打卡！" },
+            { id: "d2-5", time: "15:20", title: "洛恩小鎮 (Lorne) 衝浪勝地", tag: "濱海小鎮", type: "spot", desc: "欣賞著名的金黃沙灘與大西洋海浪，因租車稍微耽擱時間，稍作巡禮後驅車前進。" },
+            { id: "d2-6", time: "16:30", title: "抵達阿波羅灣入住 Seaview Motel", tag: "海景入住", type: "hotel", desc: "冬季約 17:30 日落，18:00 天色轉暗。入住附小廚房的海景汽車旅館，煎澳洲牛排與義大利麵！" }
+          ],
+          diary: "雖然租車取車時稍微花了點時間，洛恩停留縮短，但順利在吉朗把油加到最滿。沿著大洋路開車，一邊是巍峨山壁、一邊是澎湃南冰洋，美得讓人屏息！"
+        },
+        {
+          day: 3,
+          date: "8/19 (三)",
+          theme: "大洋路終極奇觀：奧特威神木 ➔ 十二使徒岩夕陽金光震撼！",
+          stageId: 1,
+          route: "阿波羅灣 ➔ 奧特威雨林步道 ➔ Lavers Hill ➔ 吉布森台階 ➔ 十二使徒岩 ➔ 阿德湖峽 ➔ 坎貝爾港",
+          stay: "坎貝爾港 NRMA 假日公園 (NRMA Port Campbell Holiday Park)",
+          stayCost: "NT$ 3,972 (AU$ 175.95, Booking.com)",
+          lunch: "Lavers Hill Yatzies 熱烤肉派配熱拿鐵咖啡",
+          dinner: "營地廚房自煮熱騰騰晚餐",
+          highlights: "雨林芬多精、吉布森台階仰望海柱、十二使徒岩 Golden Hour 絕美金光",
+          items: [
+            { id: "d3-1", time: "08:40", title: "奧特威雨林步道 (Maits Rest Rainforest Walk)", tag: "自然生態", type: "spot", desc: "雨天正好體會真正的「雨林」氣氛！40分鐘木棧道漫步在數百年遺產級巨大樹蕨與神木間，沿途更驚喜看到活生生的野生袋鼠與黑牛綿羊。" },
+            { id: "d3-2", time: "10:00", title: "Lavers Hill 休息品嚐 Yatzies 烤肉派", tag: "公路美食", type: "food", desc: "大洋路唯一的補給小鎮！外皮酥脆香濃的澳洲肉派 (AU$9) 配香醇 Flat White (AU$8)，雖然小貴但寒風中極度撫慰人心。" },
+            { id: "d3-3", time: "11:00", title: "吉布森台階 (Gibson Steps) 踏上黑沙灘", tag: "極限震撼", type: "spot", desc: "沿著懸崖開鑿的 86 級台階步入沙灘，近距離仰望拔海數十公尺的巨大石柱，海浪滔天。" },
+            { id: "d3-4", time: "12:30", title: "十二使徒岩 (Twelve Apostles) 第一次造訪", tag: "世界級奇觀", type: "spot", desc: "從遊客中心走地下道至主觀景台，先快速感受這座舉世聞名的石灰岩海蝕柱群雄姿。" },
+            { id: "d3-5", time: "13:40", title: "阿德湖峽 (Loch Ard Gorge) 深度探索", tag: "歷史沉船", type: "spot", desc: "探索沉船峽谷與 Tom 和 Eva 的生還故事，下到海蝕洞沙灘與步道崖邊，闔家討論故事格外有記憶點！" },
+            { id: "d3-6", time: "15:40", title: "The Grotto 天然海蝕洞 & 倫敦斷橋", tag: "海蝕拱門", type: "spot", desc: "探訪如仙境般的天然水池天窗 The Grotto 與遠眺 London Arch 倫敦拱門。" },
+            { id: "d3-7", time: "17:00", title: "二訪十二使徒岩：捕捉傳奇夕陽金光 (Golden Hour)", tag: "人生必看", type: "spot", desc: "專程趕回！17:40 夕陽將整個海面與石柱染成金紅色的壯麗瞬間，內心無比震撼感動！" },
+            { id: "d3-8", time: "18:20", title: "抵達坎貝爾港 NRMA 營地驚險 Check-in", tag: "營地歷險", type: "hotel", desc: "超過 18:00 櫃台已下班，幸好聽見裡面電視聲敲門確認，順利在門外密碼保險箱拿到鑰匙！" }
+          ],
+          diary: "今天是大洋路最高潮！奧特威雨林的芬多精、吉布森台階的沙灘、阿德湖峽的激浪，最難忘的是趕在夕陽時刻二訪十二使徒岩，親眼見證石柱鍍上一層溫暖金色光芒，一生必定要來一次！"
+        },
+        {
+          day: 4,
+          date: "8/20 (四)",
+          theme: "跨海移動日：自駕登渡輪橫越海灣 ➔ 瑪莎山彩虹小屋 ➔ 飛利浦島星空",
+          stageId: 2,
+          route: "坎貝爾港 ➔ 吉朗快速加油補貨 ➔ Queenscliff 渡輪碼頭 ➔ Sorrento ➔ 瑪莎山 ➔ 飛利浦島",
+          stay: "飛利浦島 NRMA 海濱假日公園營地 (朱鷺小屋 Cabin 5號屋)",
+          stayCost: "NT$ 7,288 / 連住兩晚 (Hotels.com)",
+          lunch: "渡輪上享用自備午餐、超市果汁與美食",
+          dinner: "營地廚房自煮 / 披薩烤窯",
+          highlights: "開車上渡輪橫越菲利普灣、瑪莎山童話彩虹小屋、海邊抬頭滿天繁星",
+          items: [
+            { id: "d4-1", time: "07:30", title: "早起出發：坎貝爾港前往皇后崖碼頭", tag: "長途行車", type: "transport", desc: "路程遙遠且有趕船時間壓力，前晚打包妥當出發。途經吉朗 APCO 加油站加滿油 (1.93 AU/L) 並在 ALDI 採買船上果汁零食。" },
+            { id: "d4-2", time: "11:20", title: "抵達 Queenscliff 碼頭開車登船", tag: "渡輪體驗", type: "transport", desc: "走車道掃描 QR Code 憑證 (車+4人 AU$146)。12:00 開船，航行 40 分鐘省下繞大圈 3 小時車程！" },
+            { id: "d4-3", time: "12:40", title: "抵達 Sorrento 港 ➔ 瑪莎山彩虹小屋 (Mt Martha)", tag: "網美拍照", type: "spot", desc: "定位 Mount Martha Beach South Carpark，一整排色彩繽紛的沙灘彩虹小屋；對街宛如歐洲小鎮，喝咖啡配硬脆歐包享受愜意時光。" },
+            { id: "d4-4", time: "14:30", title: "尚克角燈塔保護區 (Cape Schanck)", tag: "火山地質", type: "spot", desc: "木棧道走入古老玄武岩黑色峭壁海岸，迎著南冰洋風浪格外壯闊。" },
+            { id: "d4-5", time: "17:00", title: "飛利浦島 NRMA 營地 Check-in", tag: "營地入住", type: "hotel", desc: "順利換到服務中心對面的 5 號朱鷺小屋 (Cabin)，營地緊鄰海灘、提供披薩烤窯與交誼廳。夜晚雨後放晴，書萍跟亮熹在海邊看到滿天閃爍繁星！" }
+          ],
+          diary: "把汽車開進渡輪是難得的經驗，坐在船艙看窗外碧海吃午餐，省去數小時開車勞頓。瑪莎山彩虹小屋別具風情，NRMA 營地設施齊全又靠海，夜裡星空好美！"
+        },
+        {
+          day: 5,
+          date: "8/21 (五)",
+          theme: "飛利浦島全日：Cowes悠閒慢活 ➔ 諾比司角世界盡頭 ➔ 企鵝遊行歸巢！",
+          stageId: 2,
+          route: "NRMA 營地 ➔ Cowes 街道散步 ➔ 希臘料理 HSP ➔ 諾比司角 ➔ 企鵝遊行中心 ➔ 營地",
+          stay: "飛利浦島 NRMA 海濱假日公園營地 (續住第 2 晚)",
+          stayCost: "含在兩晚專案內",
+          lunch: "Kristo's Charcoal Rotisserie & Salad Bar 招牌大份量希臘烤肉 HSP",
+          dinner: "自煮或 Coles 超市熟食烤肉",
+          highlights: "The Reject Shop 大掃貨、諾比司角浪花與海豹岩、地下看台平視小企鵝搖擺上岸",
+          items: [
+            { id: "d5-1", time: "09:40", title: "Cowes 海灘悠閒散步 & The Reject Shop", tag: "海島慢活", type: "spot", desc: "飛利浦島最熱鬧城鎮，在海灘愜意散步。逛 The Reject Shop 零食與日用品超級便宜，適合大肆補貨伴手禮！" },
+            { id: "d5-2", time: "11:00", title: "午餐：品嚐希臘料理特色烤肉 HSP", tag: "特色美食", type: "food", desc: "Kristo's 招牌清真小吃拼盤 (HSP)，滿滿熱薯條鋪上羊肉與雞肉，淋上微辣特製醬料，份量大到一家人吃得超級滿足！" },
+            { id: "d5-3", time: "15:00", title: "諾比司角 (The Nobbies) 世界的盡頭", tag: "大自然奇觀", type: "spot", desc: "海岸懸崖木棧道漫步，近距離看野生蠟嘴雁與草叢中的企鵝木箱，遠眺 1.5 公里外海豹岩 (Seal Rocks) 浪花飛濺。" },
+            { id: "d5-4", time: "16:50", title: "企鵝歸巢 (Penguin Parade) 報到入場", tag: "官方重磅", type: "notice", desc: "憑預約代碼 (#1316214 等) 換票，提早進入專屬「Underground Viewing 地下看台」搶佔第一排王位！" },
+            { id: "d5-5", time: "18:00", title: "觀賞成群神仙小企鵝 (Little Penguins) 搖擺回家", tag: "生態奇觀", type: "spot", desc: "太陽下山後，一群群超萌的小企鵝自浪花中爬上沙灘，左搖右晃辛苦走過沙地爬回洞穴，近在咫尺超級可愛！" }
+          ],
+          diary: "諾比司角壯闊的海景令人流連忘返，真想待在世界盡頭發呆一整天。企鵝歸巢地下看台視野極佳，看小企鵝一整天在海上搏鬥後搖擺回家，既溫馨又佩服大自然的生命力！"
+        },
+        {
+          day: 6,
+          date: "8/22 (六)",
+          theme: "百年普芬比利蒸汽火車跨坐看木棧橋 ➔ 墨爾本市區還車 ➔ Milano 奢華公寓入住",
+          stageId: 2,
+          route: "飛利浦島 ➔ Belgrave 火車站 ➔ 蒸汽火車至 Lakeside 湖濱站 ➔ 墨爾本市區還車 ➔ Milano 公寓",
+          stay: "墨爾本米蘭服務式公寓飯店 (Milano Serviced Apartments 連住 5 晚！)",
+          stayCost: "約 NT$ 4,300/晚 (Agoda, AU$ 710.5 + 180.7)",
+          lunch: "湖濱站 Emerald Lake Park 湖畔自備野餐",
+          dinner: "維媽市場撿便宜生鮮 + 公寓大廚房豐盛海陸大餐",
+          highlights: "火車窗框垂腳看百年木棧道、湖畔倒影野餐、Milano 附溫水泳池與桑拿房",
+          items: [
+            { id: "d6-1", time: "09:00", title: "抵達 Belgrave 站報到 (免費室內大停車場)", tag: "火車報到", type: "transport", desc: "順利停入車站旁 640 個免費停車位，省下一筆昂貴停車費！憑訂位憑證 (#787368 / 4位成人 AU$264) 報到登車。" },
+            { id: "d6-2", time: "10:00", title: "搭乘普芬比利蒸汽火車 (Puffing Billy) 啟程", tag: "經典體驗", type: "spot", desc: "坐在車窗邊將雙腳掛在車廂外，蒸汽鳴笛穿梭在高聳森林與百年木棧橋 (Monbulk Creek Trestle Bridge)，沿線居民熱情揮手！" },
+            { id: "d6-3", time: "11:00", title: "Lakeside 湖濱站悠閒野餐與散步", tag: "湖濱野餐", type: "food", desc: "平靜如鏡的湖面倒映遠山，坐在長椅上吃自備便當，看水鴨悠游，一早趕車的疲累煙消雲散。" },
+            { id: "d6-4", time: "15:00", title: "驅車進墨爾本市區加滿油 & Europcar 還車", tag: "順利還車", type: "transport", desc: "在市區車行旁加滿油，週六下午順利在 17:00 前完成還車，不用煩惱市區 Hook turn 右轉待轉！" },
+            { id: "d6-5", time: "17:00", title: "入住 Milano Serviced Apartments (米蘭服務式公寓)", tag: "市區大本營", type: "hotel", desc: "就在車行對面！樓下就是 ALDI，走路即達免費電車區、RMIT、維媽市場與州立圖書館，還有超棒溫水泳池、SPA 與桑拿房！" }
+          ],
+          diary: "普芬比利火車開動時剛好雨過天晴，坐在窗沿迎風搖曳的體驗超級棒。Milano 公寓簡直是滿分選擇，阿寬可以去健身房、書萍採買方便、亮熹喜歡市區書香氛圍，完美的一天！"
+        },
+        {
+          day: 7,
+          date: "8/23 (日)",
+          theme: "週日南墨爾本市場：排隊神級可頌與鮮甜生蠔 ➔ 皇家植物園與城市天際線",
+          stageId: 3,
+          route: "Milano 公寓 ➔ 搭電車至免費區邊緣 ➔ 步行至南墨爾本市場 ➔ 戰爭紀念館 ➔ 皇家植物園 ➔ NGV ➔ 聯邦廣場 ➔ 王子橋",
+          stay: "墨爾本米蘭服務式公寓 (續住第 2 晚)",
+          stayCost: "公寓連住續住中",
+          lunch: "南墨爾本市場：立食鮮甜生蠔 + Agathé 可頌 + 大餃子",
+          dinner: "公寓大廚房自煮健康餐",
+          highlights: "Agathé 巧克力可頌、生蠔佐泰式酸辣醬立食、王子橋遠眺亞拉河天際線",
+          items: [
+            { id: "d7-1", time: "09:30", title: "朝聖南墨爾本市場 (South Melbourne Market)", tag: "傳統市場", type: "food", desc: "直奔排隊名店 Agathé Pâtisserie 買酥脆可頌（巧克力可頌口感扎實超驚豔！），再到海鮮攤品嚐塔斯馬尼亞現剖生蠔佐泰式醬，吮指回味！" },
+            { id: "d7-2", time: "11:30", title: "戰爭紀念館 (Shrine of Remembrance)", tag: "歷史建築", type: "spot", desc: "宏偉的古典式神殿建築，登上頂層平台可筆直眺望斯旺斯頓街與墨爾本市中心核心天際線。" },
+            { id: "d7-3", time: "12:15", title: "漫步皇家植物園 (Royal Botanic Gardens)", tag: "城市綠洲", type: "spot", desc: "探訪 Guilfoyle's Volcano 火山蓄水池花園，享受林蔭草皮，一家人在暖陽下聊天說笑，好愜意。" },
+            { id: "d7-4", time: "13:30", title: "維多利亞國立美術館 (NGV) & 咖啡", tag: "藝術殿堂", type: "spot", desc: "免費參觀館內世界級藝術品，在對面咖啡吧買了杯拿鐵，意外好喝又平價！" },
+            { id: "d7-5", time: "15:00", title: "聯邦廣場 ➔ 穿越百年古蹟王子橋 (Princes Bridge)", tag: "市區地標", type: "spot", desc: "站在王子橋上凝望亞拉河兩岸摩天大樓與古老建築交織的美感，被墨爾本優雅的天際線深深震撼。" }
+          ],
+          diary: "南墨爾本市場的生蠔新鮮又便宜，泰式醬汁搭上去簡直是絕配！全家沿著植物園與亞拉河畔漫步，不趕行程的走法最能感受這座全球宜居城市的美好。"
+        },
+        {
+          day: 8,
+          date: "8/24 (一)",
+          theme: "世界名校墨爾本大學書香巡禮 ➔ 費茲洛花園與國中呂老師異地溫馨相聚！",
+          stageId: 3,
+          route: "卡爾頓花園 ➔ 皇家展覽館 ➔ 墨爾本大學 ➔ 舊監獄 ➔ 舊財政部 ➔ 費茲洛花園 (庫克小屋) ➔ 墨大二訪學餐",
+          stay: "墨爾本米蘭服務式公寓 (續住第 3 晚)",
+          stayCost: "公寓連住續住中",
+          lunch: "墨爾本大學校園異國美食餐廳",
+          dinner: "墨爾本大學超佛心大份量中式自助餐",
+          highlights: "世遺皇家展覽館、墨大古老圖書館、庫克小屋、見到留職停薪國際志工呂老師",
+          items: [
+            { id: "d8-1", time: "09:00", title: "卡爾頓花園與皇家展覽館 (Royal Exhibition Building)", tag: "世界遺產", type: "spot", desc: "全澳洲第一座列入聯合國世界遺產的壯麗十九世紀展覽館，穹頂與噴泉氣勢磅礴，超好拍全家福！" },
+            { id: "d8-2", time: "10:40", title: "穿過小義大利街走進墨爾本大學 (Uni of Melbourne)", tag: "世界學府", type: "spot", desc: "感受頂尖名校英倫風哥德建築與圖書館研讀氛圍，各國留學生齊聚，充滿朝氣與學術風采。" },
+            { id: "d8-3", time: "14:45", title: "國會大廈與舊財政部大樓 (Old Treasury Building)", tag: "殖民歷史", type: "spot", desc: "外觀拍照，參觀掏金熱時期建立的地底金庫與墨爾本建城歷史展覽。" },
+            { id: "d8-4", time: "16:00", title: "費茲洛花園 (Fitzroy Gardens) 與呂老師相聚", tag: "溫馨重聚", type: "spot", desc: "造訪移築自英國的庫克小屋 (Cooks' Cottage)、溫室花房與原住民傷痕樹。最驚喜的是與亮熹國中呂老師在異鄉溫馨相見歡！" },
+            { id: "d8-5", time: "18:00", title: "回墨大二訪學餐超划算中式自助餐", tag: "超值美食", type: "food", desc: "雖然快打烊，店員熱情把菜餚裝滿大碗公，四個人大快朵頤，好吃又暖胃。" }
+          ],
+          diary: "能在南半球的費茲洛花園與亮熹國中的呂老師碰面聊天，真的有『他鄉遇故知』的感動，看著孩子大方跟老師分享近況，內心滿是欣慰！"
+        },
+        {
+          day: 9,
+          date: "8/25 (二)",
+          theme: "市區經典拱廊慢活：維媽市場 ➔ 州立圖書館圓頂 ➔ 咖啡街與塗鴉巷",
+          stageId: 3,
+          route: "維多利亞女王市場 (QVM) ➔ 州立圖書館 ➔ 唐人街 ➔ 皇家拱廊/街區拱廊 ➔ Degraves 咖啡街 ➔ 塗鴉巷",
+          stay: "墨爾本米蘭服務式公寓 (續住第 4 晚)",
+          stayCost: "公寓連住續住中",
+          lunch: "唐人街美食 / QV 購物中心輕食",
+          dinner: "公寓自煮享用超市生鮮",
+          highlights: "QVM 熱果醬甜甜圈、州立圖書館六樓俯拍圓頂、百年拱廊與咖啡街 Flat White",
+          items: [
+            { id: "d9-1", time: "08:30", title: "維多利亞女王市場 (QVM) 採買與熱甜甜圈", tag: "百年市場", type: "food", desc: "在車棚找到 American Doughnut Kitchen 餐車買現炸熱果醬甜甜圈（五個一袋），再外帶 Market Lane 咖啡！" },
+            { id: "d9-2", time: "10:00", title: "維多利亞州立圖書館 (State Library Victoria)", tag: "世界最美", type: "spot", desc: "搭電梯直奔六樓高台，俯瞰壯麗宏偉的八角形圓頂閱覽室 (La Trobe Reading Room)，無比震撼。" },
+            { id: "d9-3", time: "13:20", title: "漫步皇家拱廊 (Royal Arcade) 與街區拱廊 (Block Arcade)", tag: "百年商場", type: "spot", desc: "近 200 年歷史的馬賽克地磚與玻璃圓頂穹頂，順路在旁邊 Chemist Warehouse 補貨綿羊油與銀杏。" },
+            { id: "d9-4", time: "15:30", title: "咖啡一條街 (Degraves Street) 下午茶", tag: "咖啡文化", type: "food", desc: "在充滿歐洲巷弄氛圍的露天小咖啡館點杯正宗澳洲 Flat White 與濃郁熱可可，享受慢步調。" },
+            { id: "d9-5", time: "16:30", title: "聖保羅大教堂 ➔ 塗鴉巷 (Hosier Lane)", tag: "街頭藝術", type: "spot", desc: "造訪色彩斑斕、每隔幾天就被全新塗鴉覆蓋的 Hosier Lane，感受墨爾本奔放不羈的街頭創作力。" }
+          ],
+          diary: "今天完全沉浸在墨爾本的藝文氣息裡，州立圖書館的八角穹頂令人屏息。坐在 Degraves 街邊喝咖啡看路人，這就是墨爾本最讓人著迷的城市生活。"
+        },
+        {
+          day: 10,
+          date: "8/26 (三)",
+          theme: "越航改期賺到的一天！Milano放鬆 ➔ 韓式烤肉吃到飽 ➔ 亞拉河噴火秀 ➔ 維媽冬季夜市最終場！",
+          stageId: 3,
+          route: "Milano 設施 ➔ OhGam 韓式烤肉 ➔ 亞拉河南岸步道 ➔ DFO 購物 ➔ 整點噴火秀 ➔ 維媽市場冬季夜市",
+          stay: "墨爾本米蘭服務式公寓 (最後 1 晚)",
+          stayCost: "公寓連住續住中",
+          lunch: "OhGam Korean BBQ Buffet 韓式烤肉吃到飽 (AU$24.9/人超狂划算！)",
+          dinner: "維多利亞女王市場冬季夜市 (Winter Night Market)",
+          highlights: "公寓桑拿泳池晨泳、超高 CP 烤肉、南岸噴火秀、年度冬季夜市最後一天",
+          items: [
+            { id: "d10-1", time: "08:30", title: "早晨在 Milano 公寓爽用溫水泳池與桑拿", tag: "悠閒享受", type: "hotel", desc: "因為越航回程航班延後一天，多賺到一天假期！早晨在公寓的室內恆溫泳池游泳，再去桑拿房排汗放鬆。" },
+            { id: "d10-2", time: "12:00", title: "午餐：OhGam 韓式烤肉吃到飽大快朵頤", tag: "超值大餐", type: "food", desc: "每人僅 AU$24.9 的超狂吃到飽，一小時內肉品烤肉無限享用，原味牛五花與辣豬五花烤得滋滋作響，超推！" },
+            { id: "d10-3", time: "14:00", title: "漫步亞拉河南岸步道 (Southbank Promenade)", tag: "河岸散步", type: "spot", desc: "不趕路，坐在河畔露天長椅看街頭藝人表演與對岸高樓玻璃帷幕倒影，微風徐徐非常舒暢。" },
+            { id: "d10-4", time: "18:00", title: "欣賞南岸整點天然氣「噴火秀」", tag: "夜間奇景", type: "spot", desc: "皇冠賭場河畔外立柱每到整點噴出數公尺高的巨大火球，熱氣撲面而來，在橋上遠眺十分壯麗。" },
+            { id: "d10-5", time: "18:30", title: "朝聖維媽市場冬季夜市 (Winter Night Market)", tag: "夜市慶典", type: "food", desc: "今年度冬季夜市的最後一晚！人潮洶湧、各式異國攤販與 Live 音樂演奏，熱鬧非凡為墨爾本之夜畫下圓滿句點。" }
+          ],
+          diary: "航班改期讓我們多賺到這一天真是上帝美好的安排！韓式烤肉吃得過癮，晚上的南岸噴火秀與維媽冬季夜市盛況空前，這趟旅行的運氣真的太好了！"
+        },
+        {
+          day: 11,
+          date: "8/27 (四)",
+          theme: "滿載回憶平安返台：墨爾本 ➔ 胡志明市 ➔ 高雄小港 ➔ 萬丹",
+          stageId: 3,
+          route: "Milano 公寓 ➔ 預約計程車直達機場 T2 ➔ 海關退稅 ➔ 胡志明市轉機 ➔ 高雄小港",
+          stay: "溫暖的家 (屏東萬丹)",
+          stayCost: "NT$ 0",
+          lunch: "越航機上精緻美饌",
+          dinner: "胡志明轉機 / 高雄美味消夜",
+          highlights: "TRS 海關退稅、順利搭乘國際航班、接送返回萬丹甜蜜的家",
+          items: [
+            { id: "d11-1", time: "06:45", title: "退房搭乘預約計程車前往墨爾本機場", tag: "機場出發", type: "transport", desc: "歸還鑰匙退房，搭乘預訂計程車（約 AU$80~90 含過路費，約台幣 1800 元）舒適直達機場 T2。" },
+            { id: "d11-2", time: "08:30", title: "辦理登機 & TRS 海關櫃台退稅", tag: "機場退稅", type: "notice", desc: "持購買的高單價商品與發票至 TRS 櫃台掃描條碼辦理退稅手續，手續辦妥後前往登機門準備起飛。" },
+            { id: "d11-3", time: "10:35", title: "搭乘越航 VN780 起飛前往胡志明市", tag: "返程航段", type: "transport", desc: "飛機離陸，窗外逐漸縮小的墨爾本海岸線美不勝收。16:15 抵達胡志明市 SGN(T2)。" },
+            { id: "d11-4", time: "17:50", title: "轉乘 VN580 直飛高雄小港 (KHH)", tag: "平安返國", type: "transport", desc: "21:50 班機準時降落高雄小港機場，搭上預約的潮州計程車接送返回屏東萬丹，圓滿結束 11 天難忘的澳洲墨爾本之旅！" }
+          ],
+          diary: "雖然旅程終究來到尾聲，但這 11 天帶給全家無比珍貴的回憶！從大洋路的狂野巨浪、神仙企鵝的呆萌、古老蒸汽火車的童趣，到墨爾本市區的悠閒與咖啡香，是一趟收穫滿滿的補進度大成功之旅！"
+        }
+      ],
+      bookings: [
+        {
+          id: "bk-1",
+          title: "普芬比利百年蒸汽火車 (Puffing Billy Railway)",
+          ref: "#787368 (原165117)",
+          date: "8/22 (六) 10:00 出發",
+          route: "Belgrave ➔ Lakeside (來回，預定掛腳右側座位)",
+          pax: "4 位成人 (4 x $66.00)",
+          cost: "AU$ 264.00 (NT$ 6,054 官網已付清，不可退)",
+          tag: "重磅火車",
+          color: "emerald",
+          notes: "需提前 60 分鐘報到。Belgrave 車站旁有 640 個免費室內停車位，早到很好停。"
+        },
+        {
+          id: "bk-2",
+          title: "菲利普島神仙企鵝歸巢 (Penguin Parade)",
+          ref: "#1316214 / #1316213 / #1316227",
+          date: "8/21 (五) 預計 18:00 企鵝登陸",
+          route: "Phillip Island 企鵝遊行保護區",
+          pax: "Underground Viewing 地下看台 (2人成人 + 2位成人/普通)",
+          cost: "AU$ 206.00 + 門票 (已付清)",
+          tag: "生態奇觀",
+          color: "sky",
+          notes: "地下看台室內避寒，可平視企鵝搖晃走過玻璃窗前！開放入場時請提早至最前排卡位。"
+        },
+        {
+          id: "bk-3",
+          title: "Searoad Ferries 皇后崖跨海渡輪 (連人帶車)",
+          ref: "#5359465 (Booking Ref: 8709606)",
+          date: "8/20 (四) 12:00~14:00 (航程 40 分鐘)",
+          route: "Queenscliff 碼頭 ➔ Sorrento 碼頭 (菲利普灣)",
+          pax: "1 輛車 (含司機 5.5m以下) + 3 位成人乘客",
+          cost: "AU$ 146.00 (NT$ 3,140 已線上付清)",
+          tag: "跨海航行",
+          color: "indigo",
+          notes: "走最左側車道掃 QR Code。船上享用午餐看海景，省下 3 小時陸路開車，超省力！"
+        },
+        {
+          id: "bk-4",
+          title: "米蘭服務式公寓飯店 (Milano Serviced Apartments)",
+          ref: "Agoda 預訂",
+          date: "8/22 (六) ~ 8/27 (四) 連住 5 晚",
+          route: "8 Franklin St, Melbourne (車行對面、近 RMIT/維媽)",
+          pax: "4 人家庭套房 (含大廚房、室內溫水泳池/健身房/桑拿)",
+          cost: "約 NT$ 4,300/晚 (AU$ 710.5 + 180.7)",
+          tag: "五星機能",
+          color: "purple",
+          notes: "下樓就是 ALDI，走路可進 Free Tram Zone，廚房自煮與洗脫烘設備一應俱全。"
+        },
+        {
+          id: "bk-5",
+          title: "潮州計程車小港機場專車接送 (屏東萬丹-小港T1)",
+          ref: "電話預約 0394051763",
+          date: "去程 8/17 09:00 / 回程 8/27 22:30",
+          route: "屏東萬丹自宅 ➔ 高雄小港機場航廈",
+          pax: "4 位旅客 + 4 咖行李箱",
+          cost: "單趟 NT$ 700 (來回共 NT$ 1,400)",
+          tag: "機場接送",
+          color: "amber",
+          notes: "準時抵達住家門口接送，免除長輩小孩舟車轉乘麻煩。"
+        }
+      ],
+      stays: [
+        {
+          id: "st-1",
+          name: "阿波羅灣海景汽車旅館 (Seaview Motel & Apartments)",
+          date: "Day 2 (8/18 二) 住宿 1 晚",
+          price: "NT$ 3,330 (Trip.com)",
+          loc: "大洋路阿波羅灣 (Apollo Bay) 市區",
+          tag: "大洋路前哨",
+          desc: "面對浩瀚海灣，步行可達海灘與小鎮商店街。設有簡易小廚房，第一晚在此自煮牛排與義大利麵。",
+          pros: "海景第一排、安靜舒適、免費停車"
+        },
+        {
+          id: "st-2",
+          name: "坎貝爾港 NRMA 假日公園 (NRMA Port Campbell Holiday Park)",
+          date: "Day 3 (8/19 三) 住宿 1 晚",
+          price: "NT$ 3,972 (AU$ 175.95, Booking.com)",
+          loc: "坎貝爾港 (Port Campbell) 峽灣旁",
+          tag: "十二使徒岩旁",
+          desc: "離十二使徒岩僅 10 分鐘車程！營地內有小吊橋、景觀台與公共大廚房。晚上超過 18:00 櫃台下班會在門外鑰匙密碼箱留鑰匙。",
+          pros: "看金光夕陽最近、早晨空氣絕佳、自然生態"
+        },
+        {
+          id: "st-3",
+          name: "飛利浦島 NRMA 海濱假日公園 (朱鷺小屋 Cabin 5 號屋)",
+          date: "Day 4 ~ Day 5 (8/20 ~ 8/21) 連住 2 晚",
+          price: "NT$ 7,288 (Hotels.com 兩晚合計)",
+          loc: "飛利浦島 Cowes 海灘旁",
+          tag: "海濱度假屋",
+          desc: "緊鄰海灘，房內有一張大床與上下舖床。營地提供柴燒披薩烤窯、微波爐烤箱與咖啡機，晚上在營地海邊能抬頭看滿天繁星！",
+          pros: "直通海灘、夜晚無光害觀星、離企鵝園區近"
+        },
+        {
+          id: "st-4",
+          name: "墨爾本米蘭服務式公寓 (Milano Serviced Apartments)",
+          date: "Day 6 ~ Day 10 (8/22 ~ 8/27) 連住 5 晚！",
+          price: "平均約 NT$ 4,300/晚 (Agoda 預訂)",
+          loc: "墨爾本市中心 Franklin St (Europcar 正對面)",
+          tag: "市中心頂級機能",
+          desc: "全家讚不絕口的完美公寓！樓下是 ALDI，鄰近 RMIT、維媽市場與州立圖書館。室內恆溫溫水泳池、SPA 水療與桑拿房讓阿寬每天健身運動！",
+          pros: "Europcar 正對面還車即入住、廚房全配、室內溫水泳池桑拿"
+        }
+      ],
+      foods: [
+        {
+          name: "南墨爾本市場：現剖生蠔 (Oyster Bar)",
+          loc: "南墨爾本市場熟食海鮮攤",
+          tag: "必吃國寶海鮮",
+          desc: "塔斯馬尼亞新鮮生蠔現剖現吃，每顆肥美Q彈，一定要搭配店家桌上的特調泰式酸辣醬，酸甜滑順鮮美爆表！",
+          tip: "週日早上人潮最多，建議 10:00 前抵達享受立食！"
+        },
+        {
+          name: "Agathé Pâtisserie：法式神級排隊可頌",
+          loc: "南墨爾本市場內",
+          tag: "排隊甜點名店",
+          desc: "市場內最具代表性的法式可頌！千層酥脆，巧克力可頌 (Chocolate Croissant) 口感扎實驚艷，斑蘭與抹茶亦為招牌。",
+          tip: "下午常售罄，抵達市場第一件事就是先去排隊！"
+        },
+        {
+          name: "Lavers Hill Yatzies：大洋路經典香酥肉派 (Meat Pie)",
+          loc: "大洋路 Lavers Hill 補給站",
+          tag: "公路靈魂點心",
+          desc: "大洋路上唯一的熱食站！熱騰騰的現烤澳洲肉派 (Meat pie AU$9) 搭配比例濃醇的 Flat White 拿鐵 (AU$8)，寒風中的救贖。",
+          tip: "肉派 + 咖啡約 AU$17，雖然偏貴但在大洋路上絕對值得刷卡吃下去！"
+        },
+        {
+          name: "Kristo's Charcoal Rotisserie：大份量希臘烤肉 HSP",
+          loc: "飛利浦島 Cowes 街區",
+          tag: "海島超人氣大份量",
+          desc: "澳洲特色清真小吃拼盤 (Halal Snack Pack)！脆薯條鋪上滿滿現切羊肉與雞肉，淋上獨家蒜味與微辣醬汁，兩人分一份都吃不完！",
+          tip: "份量極大且味道濃郁，點餐時可請店家醬料稍微減鹽。"
+        },
+        {
+          name: "OhGam Korean BBQ Buffet：韓式烤肉吃到飽",
+          loc: "墨爾本市區 (鄰近亞拉河南岸)",
+          tag: "越航改期大驚喜",
+          desc: "超狂超高 CP 值！每人只要 AU$24.9 的一小時限時韓式烤肉吃到飽，原味牛五花、辣豬肉、醃牛肉滋滋作響，大口滿足！",
+          tip: "用餐限時 1 小時，專心烤肉吃飽飽免加價延長！"
+        },
+        {
+          name: "維媽市場：American Doughnut Kitchen 現炸熱果醬甜甜圈",
+          loc: "維多利亞女王市場 (QVM) 車棚餐車",
+          tag: "半世紀老字號餐車",
+          desc: "經典老式復古小巴餐車，現炸熱呼呼的球形甜甜圈裹滿白糖，咬開是酸甜燙口的覆盆子草莓果醬，五個一袋超幸福！",
+          tip: "再順道去買一杯 Market Lane 手沖咖啡，完美市集早餐組合。"
+        }
+      ],
+      tips: [
+        {
+          icon: "⛽",
+          title: "加油策略：吉朗加滿油，遠離大洋路與坎貝爾港高價！",
+          desc: "大洋路沿途油價非常昂貴，坎貝爾港更是全澳最高之一！出發時務必在吉朗 (Geelong) 把油箱加到全滿，足夠開完整趟大洋路。"
+        },
+        {
+          icon: "🦘",
+          title: "野生動物路殺與限速注意：冬季天黑早，小心慢開",
+          desc: "澳洲冬季約 17:30 日落，18:00 即全黑。大洋路與飛利浦島沿路常有野生袋鼠、針鼴出沒，路殺頻繁。澳洲超速罰單極度昂貴，嚴格遵守 50/80/100 速限安全第一！"
+        },
+        {
+          icon: "🚋",
+          title: "墨爾本市區 Free Tram Zone 免費電車不用刷 myki！",
+          desc: "市中心 CBD 綠色範圍內搭乘所有路面電車皆免費，完全不需要買 myki 交通卡！只要上下車都在免費區內，千萬不要刷卡，刷了反而會被扣跨區費。"
+        },
+        {
+          icon: "🧥",
+          title: "冬末早晚溫差與洋蔥式穿法",
+          desc: "8 月末澳洲為冬末初春，市區白天陽光下約 15~18°C，海邊與早晚常驟降至 7~9°C 伴隨海風。必備防風保暖外套、毛帽與好走的健走球鞋。"
+        },
+        {
+          icon: "🛒",
+          title: "省錢自煮秘訣：Coles / ALDI / The Reject Shop",
+          desc: "Milano 公寓樓下就是 ALDI，超市澳洲牛排與牛奶比水還便宜！在飛利浦島 Cowes 的 The Reject Shop 買餅乾零食伴手禮更是市區的半價。"
+        },
+        {
+          icon: "🔑",
+          title: "營地 Late Check-in 密碼箱取鑰匙常識",
+          desc: "澳洲假日公園營地櫃台通常 18:00 即準時下班。若晚到，店家通常會事先寄 Email 通知將鑰匙留在門口外面的密碼鎖保險箱中，不用恐慌！"
+        }
+      ],
+      packList: [
+        { id: "pk-1", text: "防風保暖連帽羽絨外套或厚大衣（大洋路強勁海風與菲利普島夜晚必備）" },
+        { id: "pk-2", text: "輕量保暖毛帽、圍巾與手套（企鵝遊行看台與清晨觀星極度禦寒）" },
+        { id: "pk-3", text: "舒適好走的防滑健走鞋或運動鞋（每日步行步數約 12,000~18,000 步）" },
+        { id: "pk-4", text: "泳衣與泳帽（享受 Milano 公寓的溫水恆溫泳池、SPA 水療與桑拿房）" },
+        { id: "pk-5", text: "澳洲八字形三腳斜向轉接頭（Type I）與多孔延長線/行動電源" },
+        { id: "pk-6", text: "信用卡（支援海外感應與 Apple/Google Pay，澳洲九成九全無現金交易）" },
+        { id: "pk-7", text: "JCB 信用卡正本（胡志明市轉機免費進出 Rose Business Lounge 必備）" },
+        { id: "pk-8", text: "國際駕照 + 台灣駕照正本（墨爾本機場 Europcar 取車租車核驗）" },
+        { id: "pk-9", text: "普芬比利火車 (#787368)、企鵝遊行與渡輪電子票券離線存檔" },
+        { id: "pk-10", text: "保冰購物袋（吉朗 Coles 買冷凍食品、牛排披薩車載保存超好用）" },
+        { id: "pk-11", text: "個人隨身常備藥品、感冒藥、腸胃藥、B群與保濕護手乳/護唇膏" },
+        { id: "pk-12", text: "手提行李擴充折疊袋（回程裝 Chemist Warehouse 綿羊油、銀杏與伴手禮）" }
+      ]
+    };
+
+    // State Variables
+    let currentDevice = 'desktop';
+    let activeDay = 1;
+    let isAllDaysMode = false;
+    let checkedItems = JSON.parse(localStorage.getItem('mel2026_checked_items') || '{}');
+    let checkedBookings = JSON.parse(localStorage.getItem('mel2026_checked_bookings') || '{}');
+    let checkedPack = JSON.parse(localStorage.getItem('mel2026_checked_pack') || '{}');
+
+    // Init App
+    function init() {
+      renderDayPills();
+      renderItinerary();
+      renderBookings();
+      renderStays();
+      renderFoods();
+      renderTips();
+      renderPackList();
+      calculateBudget();
+      updateAllCounts();
+    }
+
+    // ====================================================
+    // DEVICE SIMULATOR SWITCHING
+    // ====================================================
+    function setDeviceMode(mode) {
+      currentDevice = mode;
+      
+      // Update Button Styles
+      document.querySelectorAll('.device-btn').forEach(btn => {
+        btn.classList.remove('bg-gradient-to-r', 'from-sky-500', 'to-blue-600', 'text-white', 'shadow-sm');
+        btn.classList.add('text-slate-300');
+      });
+
+      const wrapper = document.getElementById('device-wrapper');
+      const statusBar = document.getElementById('sim-status-bar');
+      const tabletBar = document.getElementById('sim-tablet-bar');
+      const homeBar = document.getElementById('sim-home-bar');
+      const label = document.getElementById('currentDeviceLabel');
+      const dimLabel = document.getElementById('currentDimensionLabel');
+
+      wrapper.classList.remove('frame-desktop', 'frame-mobile-portrait', 'frame-tablet-16-9');
+
+      if (mode === 'desktop') {
+        document.getElementById('btn-desktop').classList.add('bg-gradient-to-r', 'from-sky-500', 'to-blue-600', 'text-white', 'shadow-sm');
+        document.getElementById('btn-desktop').classList.remove('text-slate-300');
+        wrapper.classList.add('frame-desktop');
+        statusBar.classList.add('hidden');
+        tabletBar.classList.add('hidden');
+        homeBar.classList.add('hidden');
+        label.textContent = '💻 電腦版（寬螢幕 100%）';
+        dimLabel.textContent = '100% 滿版自適應';
+      } else if (mode === 'mobile') {
+        document.getElementById('btn-mobile').classList.add('bg-gradient-to-r', 'from-sky-500', 'to-blue-600', 'text-white', 'shadow-sm');
+        document.getElementById('btn-mobile').classList.remove('text-slate-300');
+        wrapper.classList.add('frame-mobile-portrait');
+        statusBar.classList.remove('hidden');
+        tabletBar.classList.add('hidden');
+        homeBar.classList.remove('hidden');
+        label.textContent = '📲 手機直式（iPhone 規格）';
+        dimLabel.textContent = '390 × 844 px 直式畫面';
+      } else if (mode === 'tablet-16-9') {
+        document.getElementById('btn-tablet').classList.add('bg-gradient-to-r', 'from-sky-500', 'to-blue-600', 'text-white', 'shadow-sm');
+        document.getElementById('btn-tablet').classList.remove('text-slate-300');
+        wrapper.classList.add('frame-tablet-16-9');
+        statusBar.classList.add('hidden');
+        tabletBar.classList.remove('hidden');
+        homeBar.classList.add('hidden');
+        label.textContent = '📱 平板 16:9（橫向寬螢幕模式）';
+        dimLabel.textContent = '1024 × 576 px (16:9 規格)';
+      }
+    }
+
+    // ====================================================
+    // TAB NAVIGATION
+    // ====================================================
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => btn.classList.remove('nav-tab-active'));
+
+      const target = document.getElementById(`view-${tabId}`);
+      const btn = document.getElementById(`nav-${tabId}`);
+      if (target) target.classList.remove('hidden');
+      if (btn) btn.classList.add('nav-tab-active');
+
+      const quickNav = document.getElementById('quickDayNav');
+      if (quickNav) {
+        if (tabId === 'itinerary') quickNav.classList.remove('hidden');
+        else quickNav.classList.add('hidden');
+      }
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    // ====================================================
+    // RENDER ITINERARY
+    // ====================================================
+    function renderDayPills() {
+      const container = document.getElementById('dayPillsContainer');
+      container.innerHTML = melbourneTrip.days.map(d => {
+        const isActive = (d.day === activeDay && !isAllDaysMode);
+        let borderClass = "border-sky-300 text-sky-800";
+        if (d.stageId === 2) borderClass = "border-emerald-300 text-emerald-800";
+        if (d.stageId === 3) borderClass = "border-amber-300 text-amber-800";
+
+        let activeStyle = "bg-orange-500 text-white font-black shadow-md border-transparent scale-105";
+        let idleStyle = `bg-amber-50 hover:bg-amber-100 text-slate-700 ${borderClass}`;
+
+        return `
+          <button onclick="selectDay(${d.day})" id="pill-${d.day}"
+            class="px-2.5 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition border ${isActive ? activeStyle : idleStyle}">
+            Day ${d.day}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectDay(dayNum) {
+      activeDay = dayNum;
+      isAllDaysMode = false;
+      document.getElementById('btnToggleAllDays').textContent = '📑 展開全 11 天';
+      renderDayPills();
+      renderItinerary();
+      const ind = document.getElementById('quickDayIndicator');
+      if (ind) ind.textContent = `Day ${dayNum} / 11`;
+    }
+
+    function toggleAllDays() {
+      isAllDaysMode = !isAllDaysMode;
+      const btn = document.getElementById('btnToggleAllDays');
+      if (isAllDaysMode) {
+        btn.textContent = '📌 收合為單日';
+        document.querySelectorAll('#dayPillsContainer button').forEach(b => b.classList.remove('bg-orange-500', 'text-white', 'scale-105'));
+      } else {
+        btn.textContent = '📑 展開全 11 天';
+        renderDayPills();
+      }
+      renderItinerary();
+    }
+
+    function navigateDay(delta) {
+      let next = activeDay + delta;
+      if (next < 1) next = 1;
+      if (next > 11) next = 11;
+      selectDay(next);
+    }
+
+    function filterStage(stageId) {
+      switchTab('itinerary');
+      const stage = melbourneTrip.stages.find(s => s.id === stageId);
+      if (stage) selectDay(stage.days[0]);
+    }
+
+    function renderDayCard(day) {
+      let stageTheme = {
+        badge: "bg-sky-100 text-sky-800 border-sky-300",
+        border: "border-sky-200",
+        headerBg: "bg-gradient-to-r from-sky-50 via-white to-sky-50/50",
+        icon: "🌊",
+        label: "第一階段 • 大洋路壯麗自駕"
+      };
+
+      if (day.stageId === 2) {
+        stageTheme = {
+          badge: "bg-emerald-100 text-emerald-800 border-emerald-300",
+          border: "border-emerald-200",
+          headerBg: "bg-gradient-to-r from-emerald-50 via-white to-emerald-50/50",
+          icon: "🐧",
+          label: "第二階段 • 菲利普島與蒸汽火車"
+        };
+      } else if (day.stageId === 3) {
+        stageTheme = {
+          badge: "bg-amber-100 text-amber-800 border-amber-300",
+          border: "border-amber-200",
+          headerBg: "bg-gradient-to-r from-amber-50 via-white to-amber-50/50",
+          icon: "🚋",
+          label: "第三階段 • 墨爾本都會慢活"
+        };
+      }
+
+      const itemsHtml = day.items.map(item => {
+        const isChecked = !!checkedItems[item.id];
+        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title + ' Melbourne Victoria Australia')}`;
+
+        let typeBadge = '<span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">📍 ' + item.tag + '</span>';
+        if (item.type === 'food') typeBadge = '<span class="text-[10px] px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 font-bold">🍴 ' + item.tag + '</span>';
+        if (item.type === 'transport') typeBadge = '<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 text-slate-800 font-bold">🚗 ' + item.tag + '</span>';
+        if (item.type === 'hotel') typeBadge = '<span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 font-bold">🏨 ' + item.tag + '</span>';
+        if (item.type === 'notice') typeBadge = '<span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 font-bold">⚠️ ' + item.tag + '</span>';
+
+        return `
+          <div class="p-3.5 rounded-2xl border border-slate-200/90 bg-white hover:border-orange-300 transition-all flex items-start gap-3 ${isChecked ? 'opacity-50 bg-slate-50' : 'shadow-xs'}" id="item-${item.id}">
+            <input type="checkbox" onchange="toggleItemDone('${item.id}')" ${isChecked ? 'checked' : ''} 
+              class="mt-1 w-4 h-4 rounded text-orange-600 border-slate-300 focus:ring-orange-500 cursor-pointer flex-shrink-0" />
+            
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-800 text-white">${item.time}</span>
+                <h4 class="text-xs sm:text-sm font-bold text-slate-900 ${isChecked ? 'line-through text-slate-400' : ''}">${item.title}</h4>
+                ${typeBadge}
+              </div>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed ${isChecked ? 'text-slate-400' : ''}">${item.desc}</p>
+            </div>
+
+            <a href="${mapUrl}" target="_blank" rel="noopener noreferrer" title="Google Maps 導航"
+              class="no-print p-1.5 text-slate-400 hover:text-orange-600 hover:bg-orange-50 rounded-xl transition flex-shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </a>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="bg-white rounded-3xl border-2 ${stageTheme.border} shadow-sm overflow-hidden mb-4">
+          <!-- Day Header -->
+          <div class="p-4 sm:p-5 border-b border-slate-100 ${stageTheme.headerBg}">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-black border ${stageTheme.badge}">
+                    Day ${day.day} • ${day.date}
+                  </span>
+                  <span class="text-xs text-slate-500 font-bold">${stageTheme.icon} ${stageTheme.label}</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-black text-slate-900 mt-1.5">${day.theme}</h3>
+                <div class="text-xs text-slate-600 mt-1 font-semibold flex items-center gap-1">
+                  <span class="text-orange-600 font-bold">🧭 路線：</span>
+                  <span>${day.route}</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap sm:flex-col items-start sm:items-end gap-1 text-xs">
+                <span class="font-bold px-2.5 py-1 bg-white border border-slate-200 rounded-xl text-slate-800 shadow-2xs">
+                  🏠 住宿：${day.stay} <span class="text-orange-600 font-mono">(${day.stayCost})</span>
+                </span>
+                <span class="font-bold text-amber-800 px-2.5 py-0.5 bg-amber-50 border border-amber-200 rounded-lg text-[11px]">
+                  ✨ 亮點：${day.highlights}
+                </span>
+              </div>
+            </div>
+
+            <!-- Meals Line -->
+            <div class="mt-3.5 pt-2.5 border-t border-slate-200/60 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div class="flex items-center gap-1.5 text-slate-700">
+                <span class="font-extrabold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md text-[10px]">中餐</span>
+                <span class="truncate font-medium">${day.lunch}</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-slate-700">
+                <span class="font-extrabold text-indigo-800 bg-indigo-100 px-2 py-0.5 rounded-md text-[10px]">晚餐</span>
+                <span class="truncate font-medium">${day.dinner}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Items Timeline -->
+          <div class="p-3.5 sm:p-5 space-y-2.5 bg-slate-50/50">
+            ${itemsHtml}
+          </div>
+
+          <!-- Real Travel Diary Card -->
+          <div class="px-4 py-3 bg-amber-50/80 border-t border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-950">
+            <span class="text-lg flex-shrink-0">📝</span>
+            <div class="leading-relaxed">
+              <strong class="font-extrabold text-amber-900">家庭真實旅行心得手記：</strong>
+              <span>${day.diary}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderItinerary() {
+      const container = document.getElementById('itineraryContainer');
+      if (isAllDaysMode) {
+        container.innerHTML = melbourneTrip.days.map(d => renderDayCard(d)).join('');
+      } else {
+        const d = melbourneTrip.days.find(x => x.day === activeDay);
+        if (d) container.innerHTML = renderDayCard(d);
+      }
+    }
+
+    function toggleItemDone(itemId) {
+      checkedItems[itemId] = !checkedItems[itemId];
+      localStorage.setItem('mel2026_checked_items', JSON.stringify(checkedItems));
+      renderItinerary();
+      updateAllCounts();
+    }
+
+    // ====================================================
+    // RENDER BOOKINGS
+    // ====================================================
+    function renderBookings() {
+      const container = document.getElementById('bookingsGridContainer');
+      container.innerHTML = melbourneTrip.bookings.map(b => {
+        const isDone = !!checkedBookings[b.id];
+        return `
+          <div class="p-4 rounded-3xl border-2 border-slate-200 bg-white hover:border-orange-300 transition-all flex flex-col justify-between ${isDone ? 'opacity-60 bg-slate-50' : 'shadow-xs'}">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-black px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800">${b.tag}</span>
+                <span class="text-[11px] font-mono font-bold text-slate-500">${b.ref}</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-extrabold text-slate-900 mt-2">${b.title}</h3>
+              <div class="mt-2 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5"><span class="text-slate-400">📅 日期時段：</span><span class="font-bold text-slate-800">${b.date}</span></div>
+                <div class="flex items-center gap-1.5"><span class="text-slate-400">🧭 航線/項目：</span><span class="font-medium">${b.route}</span></div>
+                <div class="flex items-center gap-1.5"><span class="text-slate-400">👥 預定人數：</span><span class="font-medium">${b.pax}</span></div>
+                <div class="flex items-center gap-1.5"><span class="text-slate-400">💰 費用金額：</span><span class="font-bold text-orange-600">${b.cost}</span></div>
+              </div>
+            </div>
+
+            <div class="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[11px] text-slate-500 truncate max-w-[70%]">${b.notes}</span>
+              <label class="inline-flex items-center gap-1.5 cursor-pointer text-xs font-bold ${isDone ? 'text-emerald-600' : 'text-slate-400'}">
+                <input type="checkbox" onchange="toggleBooking('${b.id}')" ${isDone ? 'checked' : ''} class="w-4 h-4 rounded text-emerald-600">
+                <span>${isDone ? '已核驗' : '標記核驗'}</span>
+              </label>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleBooking(id) {
+      checkedBookings[id] = !checkedBookings[id];
+      localStorage.setItem('mel2026_checked_bookings', JSON.stringify(checkedBookings));
+      renderBookings();
+      updateAllCounts();
+    }
+
+    // ====================================================
+    // RENDER STAYS
+    // ====================================================
+    function renderStays() {
+      const container = document.getElementById('staysGridContainer');
+      container.innerHTML = melbourneTrip.stays.map(s => {
+        return `
+          <div class="p-4 rounded-3xl border border-slate-200 bg-white hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-black px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800">${s.tag}</span>
+                <span class="text-xs font-bold text-orange-600">${s.price}</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900 mt-2">${s.name}</h3>
+              <div class="text-[11px] text-slate-500 font-bold mt-0.5">${s.date} • 📍 ${s.loc}</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">${s.desc}</p>
+            </div>
+            <div class="mt-3.5 pt-2 border-t border-slate-100 text-[11px] font-bold text-emerald-700 bg-emerald-50/50 p-2 rounded-xl">
+              ⭐ 特色亮點：${s.pros}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ====================================================
+    // RENDER FOODS
+    // ====================================================
+    function renderFoods() {
+      const container = document.getElementById('foodsGridContainer');
+      container.innerHTML = melbourneTrip.foods.map(f => {
+        return `
+          <div class="p-4 rounded-3xl border border-slate-200 bg-white hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-black px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800">${f.tag}</span>
+                <span class="text-[11px] font-bold text-slate-500">📍 ${f.loc}</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900 mt-2">${f.name}</h3>
+              <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">${f.desc}</p>
+            </div>
+            <div class="mt-3.5 pt-2 border-t border-slate-100 text-[11px] text-orange-900 bg-orange-50/60 p-2 rounded-xl font-bold">
+              💡 饕客小秘訣：${f.tip}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ====================================================
+    // RENDER TIPS
+    // ====================================================
+    function renderTips() {
+      const container = document.getElementById('tipsGridContainer');
+      container.innerHTML = melbourneTrip.tips.map(t => {
+        return `
+          <div class="p-4 rounded-3xl border border-slate-200 bg-amber-50/30 flex items-start gap-3">
+            <span class="text-2xl flex-shrink-0">${t.icon}</span>
+            <div>
+              <h3 class="text-sm font-extrabold text-slate-900">${t.title}</h3>
+              <p class="text-xs text-slate-700 mt-1 leading-relaxed">${t.desc}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ====================================================
+    // PACK LIST & BUDGET
+    // ====================================================
+    function renderPackList() {
+      const container = document.getElementById('packListContainer');
+      container.innerHTML = melbourneTrip.packList.map(item => {
+        const isDone = !!checkedPack[item.id];
+        return `
+          <label class="p-2.5 rounded-2xl border border-slate-200 hover:bg-slate-50 transition flex items-center gap-2.5 cursor-pointer ${isDone ? 'bg-slate-50 opacity-60' : 'bg-white shadow-2xs'}">
+            <input type="checkbox" onchange="togglePack('${item.id}')" ${isDone ? 'checked' : ''} 
+              class="w-4 h-4 rounded text-orange-600 border-slate-300 focus:ring-orange-500 cursor-pointer flex-shrink-0" />
+            <span class="text-xs ${isDone ? 'line-through text-slate-400 font-normal' : 'text-slate-800 font-bold'}">${item.text}</span>
+          </label>
+        `;
+      }).join('');
+      updateAllCounts();
+    }
+
+    function togglePack(id) {
+      checkedPack[id] = !checkedPack[id];
+      localStorage.setItem('mel2026_checked_pack', JSON.stringify(checkedPack));
+      renderPackList();
+    }
+
+    function calculateBudget() {
+      const flight = parseInt(document.getElementById('input-flight').value);
+      const stay = parseInt(document.getElementById('input-stay').value);
+      const transit = parseInt(document.getElementById('input-transit').value);
+      const ticket = parseInt(document.getElementById('input-ticket').value);
+      const food = parseInt(document.getElementById('input-food').value);
+
+      document.getElementById('label-flight').textContent = `NT$ ${flight.toLocaleString()} (AU$${Math.round(flight/21.5).toLocaleString()})`;
+      document.getElementById('label-stay').textContent = `NT$ ${stay.toLocaleString()} (AU$${Math.round(stay/21.5).toLocaleString()})`;
+      document.getElementById('label-transit').textContent = `NT$ ${transit.toLocaleString()} (AU$${Math.round(transit/21.5).toLocaleString()})`;
+      document.getElementById('label-ticket').textContent = `NT$ ${ticket.toLocaleString()} (AU$${Math.round(ticket/21.5).toLocaleString()})`;
+      document.getElementById('label-food').textContent = `NT$ ${food.toLocaleString()} (AU$${Math.round(food/21.5).toLocaleString()})`;
+
+      const total = flight + stay + transit + ticket + food;
+      const audTotal = Math.round(total / 21.5);
+      const perPerson = Math.round(total / 4);
+
+      document.getElementById('totalNTD').textContent = `NT$ ${total.toLocaleString()}`;
+      document.getElementById('totalAUD').textContent = `約 AU$ ${audTotal.toLocaleString()} 澳幣 (每人約 NT$ ${perPerson.toLocaleString()})`;
+    }
+
+    // ====================================================
+    // SEARCH & RESET
+    // ====================================================
+    function handleSearch(query) {
+      const q = query.trim().toLowerCase();
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (q.length > 0) {
+        clearBtn.classList.remove('hidden');
+        switchTab('itinerary');
+        
+        let matches = [];
+        melbourneTrip.days.forEach(d => {
+          const matchTheme = d.theme.toLowerCase().includes(q);
+          const matchRoute = d.route.toLowerCase().includes(q);
+          const matchDiary = d.diary.toLowerCase().includes(q);
+          const matchItems = d.items.filter(i => 
+            i.title.toLowerCase().includes(q) || i.desc.toLowerCase().includes(q) || i.tag.toLowerCase().includes(q)
+          );
+
+          if (matchTheme || matchRoute || matchDiary || matchItems.length > 0) {
+            matches.push({
+              ...d,
+              items: matchItems.length > 0 ? matchItems : d.items
+            });
+          }
+        });
+
+        const container = document.getElementById('itineraryContainer');
+        if (matches.length === 0) {
+          container.innerHTML = `
+            <div class="bg-white p-8 text-center rounded-3xl border border-slate-200">
+              <div class="text-3xl mb-1">🔍</div>
+              <h3 class="text-sm font-extrabold text-slate-800">未找到符合「${query}」的行程</h3>
+              <p class="text-xs text-slate-500 mt-1">請嘗試搜尋「使徒岩」、「可頌」、「生蠔」、「火車」、「企鵝」等關鍵字</p>
+            </div>
+          `;
+        } else {
+          container.innerHTML = matches.map(d => renderDayCard(d)).join('');
+        }
+      } else {
+        clearBtn.classList.add('hidden');
+        renderItinerary();
+      }
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      handleSearch('');
+    }
+
+    function updateAllCounts() {
+      // Bookings count
+      const bDone = Object.values(checkedBookings).filter(Boolean).length;
+      document.getElementById('headerBookingCount').textContent = `${bDone} / ${melbourneTrip.bookings.length} 完成`;
+      const bDoneEl = document.getElementById('bookingsDoneCount');
+      if (bDoneEl) bDoneEl.textContent = `${bDone} / ${melbourneTrip.bookings.length} 完成確認`;
+
+      // Pack list count
+      const packTotal = melbourneTrip.packList.length;
+      const packDone = Object.values(checkedPack).filter(Boolean).length;
+      const packEl = document.getElementById('packProgress');
+      if (packEl) packEl.textContent = `${packDone} / ${packTotal} 完成`;
+    }
+
+    function resetTripProgress() {
+      if (confirm('確定要重置所有行程勾選與預約核驗紀錄嗎？')) {
+        checkedItems = {};
+        checkedBookings = {};
+        checkedPack = {};
+        localStorage.removeItem('mel2026_checked_items');
+        localStorage.removeItem('mel2026_checked_bookings');
+        localStorage.removeItem('mel2026_checked_pack');
+        renderItinerary();
+        renderBookings();
+        renderPackList();
+        updateAllCounts();
+        alert('已成功重置所有進度！');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
